@@ -1,0 +1,980 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Главная страница */
+main.home {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('photo/china.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed; /* Зафиксировать фон для лучшего эффекта */
+    background-position: center center; /* Центрировать изображение */
+    background-repeat: no-repeat; /* Убедиться, что фон не повторяется */
+}
+
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.5); /* Белый полупрозрачный фон для текста */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.home h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Стили для страницы гида Александры */
+body.aleksandra-page {
+    background: url('photo/china.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.guide-info {
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+}
+
+.guide-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gallery-photo {
+    width: 32%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Текст о гиде */
+.guide-info p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Стили для страницы гидов */
+.guides {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.guides h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Три гида в одном ряду */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.guide-item {
+    text-align: center;
+}
+
+.guide-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.guide-item img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Ограничение максимальной ширины */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Специальные стили для анкеты Бекзата */
+.guide-info.bekzat-text {
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif; /* Единый шрифт для анкеты */
+}
+
+/* Стили для списка в анкете Бекзата */
+.guide-info.bekzat-text ul {
+    list-style-position: inside; /* Сохраняет маркеры внутри контейнера */
+    padding-left: 20px; /* Отступ для всего списка */
+}
+
+.guide-info.bekzat-text li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+    padding-left: 10px; /* Выровненный отступ для каждого пункта */
+    text-indent: -10px; /* Выровнять маркер списка с текстом */
+    font-size: 1.1em; /* Размер шрифта для списка */
+    line-height: 1.6; /* Интерлиньяж для читаемости */
+}
+
+/* Центрирование заголовка в анкете Бекзата */
+.guide-info.bekzat-text h2 {
+    text-align: center; /* Выравнивание заголовка по центру */
+    font-size: 2.5em; /* Размер шрифта заголовка */
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+}
+
+/* Стили для раздела туров */
+.tours h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.tour-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tour-item {
+    width: 32%; /* Три элемента в ряд */
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tour-item img {
+    width: 100%;
+    height: 250px; /* Задаем фиксированную высоту для всех изображений */
+    object-fit: cover; /* Обеспечиваем сохранение пропорций и обрезку по необходимости */
+    border-radius: 5px;
+}
+
+
+.tour-item h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.tour-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.tour-item a:hover {
+    color: #555;
+}
+
+.guide-item img{
+    width: 100%;
+    height: 400px; /* Задаем фиксированную высоту для всех изображений */
+    object-fit: cover; /* Обеспечиваем сохранение пропорций и обрезку по необходимости */
+    border-radius: 5px;
+}
+
+/* Стили для раздела тура в Сиань */
+.tour-title {
+    text-align: center; /* Центрирование заголовка */
+    margin: 20px 0 10px 0; /* Отступы: сверху - 20px, снизу - 10px */
+    font-size: 2em; /* Размер шрифта для заголовка */
+    color: #333; /* Цвет заголовка */
+}
+
+.intro-text {
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Занимает всю ширину экрана */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 1.2em; /* Размер шрифта для вводного текста */
+}
+
+.xian-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* Белый полупрозрачный фон для текста */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px; /* Максимальная ширина оверлея */
+    margin: 0 auto 40px auto; /* Добавлен нижний отступ 40px */
+}
+
+.tour-day {
+    display: flex;
+    flex-direction: row; /* Горизонтальное выравнивание */
+    margin: 20px 0; /* Отступы между днями */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для блока дня */
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px; /* Отступы внутри блока */
+}
+
+.day-number {
+    flex: 0 0 100px; /* Фиксированная ширина для номера дня */
+    background-color: #f9b52a; /* Цвет фона для выделения номера дня */
+    padding: 10px; /* Отступ для номера дня */
+    text-align: center; /* Центрирование номера дня */
+    border-radius: 10px; /* Закругление углов номера дня */
+    margin-right: 20px; /* Отступ между номером дня и информацией */
+}
+
+.day-info {
+    flex-grow: 1; /* Позволяет тексту занимать оставшееся пространство */
+    padding: 10px; /* Внутренний отступ для текста */
+    text-align: center;
+}
+
+.day-image {
+    width: 500px; /* Изображение адаптируется под размер контейнера */
+    height: auto; /* Сохраняется пропорция изображения */
+    margin: 20px 0; /* Отступ сверху и снизу по 20px, слева и справа — 0 */
+    border-radius: 10px; /* Скругление углов (опционально) */
+}
+
+.day-content ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.day-content ul li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+
+/* Стили для раздела тура в Сиань */
+.tour-details {
+    position: relative; /* Относительное позиционирование для оверлея */
+}
+
+.xian-background {
+    background: url('tours/tour_xian/oboi_na_fon.webp') no-repeat center center; /* Путь к изображению фона */
+    background-size: cover; /* Фон заполняет всю ширину экрана */
+    background-position: center; /* Центрируем изображение */
+    padding: 40px 0; /* Отступы для контейнера */
+    background-attachment: fixed; /* Фиксируем фон при скролле (опционально) */
+    background-color: #f5f5f5; /* Цвет фона на случай, если изображение не покрывает весь блок */
+}
+
+.tour-title {
+    font-size: 2.5em; /* Размер заголовка */
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.2em; /* Размер вводного текста */
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Стили для раздела тура в Пекин */
+.beijing-tour-title {
+    text-align: center; /* Центрирование заголовка */
+    margin: 20px 0 10px 0; /* Отступы: сверху - 20px, снизу - 10px */
+    font-size: 2.5em; /* Размер шрифта для заголовка */
+    color: #333; /* Цвет заголовка */
+}
+
+.beijing-intro-text {
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Занимает всю ширину экрана */
+    margin-bottom: 30px; /* Отступ снизу */
+    font-size: 1.2em; /* Размер шрифта для вводного текста */
+}
+
+.beijing-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* Белый полупрозрачный фон для текста */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px; /* Максимальная ширина оверлея */
+    margin: 0 auto 40px auto; /* Добавлен нижний отступ 40px */
+}
+
+.beijing-tour-day {
+    display: flex;
+    flex-direction: row; /* Горизонтальное выравнивание */
+    margin: 20px 0; /* Отступы между днями */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для блока дня */
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px; /* Отступы внутри блока */
+}
+
+.beijing-day-number {
+    flex: 0 0 100px; /* Фиксированная ширина для номера дня */
+    background-color: #f44336; /* Цвет фона для выделения номера дня (красный для Пекина) */
+    padding: 10px; /* Отступ для номера дня */
+    text-align: center; /* Центрирование номера дня */
+    border-radius: 10px; /* Закругление углов номера дня */
+    margin-right: 20px; /* Отступ между номером дня и информацией */
+}
+
+.beijing-day-info {
+    flex-grow: 1; /* Позволяет тексту занимать оставшееся пространство */
+    padding: 10px; /* Внутренний отступ для текста */
+    text-align: center;
+}
+
+.beijing-day-image {
+    width: 500px; /* Изображение адаптируется под размер контейнера */
+    height: auto; /* Сохраняется пропорция изображения */
+    margin: 20px 0; /* Отступ сверху и снизу по 20px, слева и справа — 0 */
+    border-radius: 10px; /* Скругление углов (опционально) */
+}
+
+.beijing-day-content ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.beijing-day-content ul li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+
+/* Стили для раздела тура в Пекин */
+.beijing-tour-details {
+    position: relative; /* Относительное позиционирование для оверлея */
+}
+
+.beijing-background {
+    background: url('tours/tour_beijing/beijing-background.jpg') no-repeat center center; /* Путь к изображению фона для Пекина */
+    background-size: cover; /* Фон заполняет всю ширину экрана */
+    background-position: center; /* Центрируем изображение */
+    padding: 40px 0; /* Отступы для контейнера */
+    background-attachment: fixed; /* Фиксируем фон при скролле (опционально) */
+    background-color: #f5f5f5; /* Цвет фона на случай, если изображение не покрывает весь блок */
+}
+
+.beijing-tour-title {
+    font-size: 2.5em; /* Размер заголовка */
+    margin-bottom: 20px;
+}
+
+.beijing-intro-text {
+    font-size: 1.2em; /* Размер вводного текста */
+    margin-bottom: 30px;
+}
+
+
+
+
+
+/* Стили для раздела тура в Шанхай */
+.shanghai-tour-title {
+    text-align: center; /* Центрирование заголовка */
+    margin: 20px 0 10px 0; /* Отступы: сверху - 20px, снизу - 10px */
+    font-size: 2.5em; /* Размер шрифта для заголовка */
+    color: #1a1a1a; /* Цвет заголовка */
+}
+
+.shanghai-intro-text {
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Занимает всю ширину экрана */
+    margin-bottom: 30px; /* Отступ снизу */
+    font-size: 1.2em; /* Размер шрифта для вводного текста */
+}
+
+.shanghai-overlay {
+    background-color: rgba(255, 255, 255, 0.9); /* Белый полупрозрачный фон для текста */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px; /* Максимальная ширина оверлея */
+    margin: 0 auto 40px auto; /* Добавлен нижний отступ 40px */
+}
+
+.shanghai-tour-day {
+    display: flex;
+    flex-direction: row; /* Горизонтальное выравнивание */
+    margin: 20px 0; /* Отступы между днями */
+    background-color: rgba(245, 245, 245, 0.9); /* Полупрозрачный фон для блока дня */
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px; /* Отступы внутри блока */
+}
+
+.shanghai-day-number {
+    flex: 0 0 100px; /* Фиксированная ширина для номера дня */
+    background-color: #4CAF50; /* Цвет фона для номера дня (зеленый для Шанхая) */
+    padding: 10px; /* Отступ для номера дня */
+    text-align: center; /* Центрирование номера дня */
+    border-radius: 10px; /* Скругление углов номера дня */
+    margin-right: 20px; /* Отступ между номером дня и информацией */
+}
+
+.shanghai-day-info {
+    flex-grow: 1; /* Позволяет тексту занимать оставшееся пространство */
+    padding: 10px; /* Внутренний отступ для текста */
+    text-align: center;
+}
+
+.shanghai-day-image {
+    width: 500px; /* Изображение адаптируется под размер контейнера */
+    height: auto; /* Сохраняется пропорция изображения */
+    margin: 20px 0; /* Отступ сверху и снизу по 20px, слева и справа — 0 */
+    border-radius: 10px; /* Скругление углов */
+}
+
+.shanghai-day-content ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.shanghai-day-content ul li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+
+/* Стили для раздела тура в Шанхай */
+.shanghai-tour-details {
+    position: relative; /* Относительное позиционирование для оверлея */
+}
+
+.shanghai-background {
+    background: url('tours/tour_shanghai/shanghai-background.jpg') no-repeat center center; /* Путь к изображению фона для Шанхая */
+    background-size: cover; /* Фон заполняет всю ширину экрана */
+    background-position: center; /* Центрируем изображение */
+    padding: 40px 0; /* Отступы для контейнера */
+    background-attachment: fixed; /* Фиксируем фон при скролле (опционально) */
+    background-color: #f5f5f5; /* Цвет фона на случай, если изображение не покрывает весь блок */
+}
+
+.shanghai-tour-title {
+    font-size: 2.5em; /* Размер заголовка */
+    margin-bottom: 20px;
+}
+
+.shanghai-intro-text {
+    font-size: 1.2em; /* Размер вводного текста */
+    margin-bottom: 30px;
+}
+
+
+
+
+
+/* Стили для раздела тура в Шэньчжэнь */
+.shenzhen-tour-title {
+    text-align: center; /* Центрирование заголовка */
+    margin: 20px 0 10px 0; /* Отступы: сверху - 20px, снизу - 10px */
+    font-size: 2.5em; /* Размер шрифта для заголовка */
+    color: #004d40; /* Цвет заголовка (глубокий зелёный для Шэньчжэня) */
+}
+
+.shenzhen-intro-text {
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Занимает всю ширину экрана */
+    margin-bottom: 30px; /* Отступ снизу */
+    font-size: 1.2em; /* Размер шрифта для вводного текста */
+}
+
+.shenzhen-overlay {
+    background-color: rgba(255, 255, 255, 0.85); /* Полупрозрачный фон для текста */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px; /* Максимальная ширина оверлея */
+    margin: 0 auto 40px auto; /* Нижний отступ 40px */
+}
+
+.shenzhen-tour-day {
+    display: flex;
+    flex-direction: row; /* Горизонтальное выравнивание */
+    margin: 20px 0; /* Отступы между днями */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для блока дня */
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px; /* Отступы внутри блока */
+}
+
+.shenzhen-day-number {
+    flex: 0 0 100px; /* Фиксированная ширина для номера дня */
+    background-color: #00bfa5; /* Цвет фона для выделения номера дня (бирюзовый для Шэньчжэня) */
+    padding: 10px; /* Отступ для номера дня */
+    text-align: center; /* Центрирование номера дня */
+    border-radius: 10px; /* Скругление углов номера дня */
+    margin-right: 20px; /* Отступ между номером дня и информацией */
+}
+
+.shenzhen-day-info {
+    flex-grow: 1; /* Позволяет тексту занимать оставшееся пространство */
+    padding: 10px; /* Внутренний отступ для текста */
+    text-align: center;
+}
+
+.shenzhen-day-image {
+    width: 500px; /* Размер изображения */
+    height: auto; /* Сохраняет пропорции изображения */
+    margin: 20px 0; /* Отступ сверху и снизу по 20px, слева и справа — 0 */
+    border-radius: 10px; /* Скругление углов изображения */
+}
+
+.shenzhen-day-content ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.shenzhen-day-content ul li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+
+/* Стили для раздела тура в Шэньчжэнь */
+.shenzhen-tour-details {
+    position: relative; /* Относительное позиционирование для оверлея */
+}
+
+.shenzhen-background {
+    background: url('tours/tour_shenzhen/shenzhen-background.jpg') no-repeat center center; /* Путь к изображению фона для Шэньчжэня */
+    background-size: cover; /* Фон заполняет всю ширину экрана */
+    background-position: center; /* Центрируем изображение */
+    padding: 40px 0; /* Отступы для контейнера */
+    background-attachment: fixed; /* Фиксируем фон при скролле (опционально) */
+    background-color: #f5f5f5; /* Цвет фона на случай, если изображение не покрывает весь блок */
+}
+
+.shenzhen-tour-title {
+    font-size: 2.5em; /* Размер заголовка */
+    margin-bottom: 20px;
+}
+
+.shenzhen-intro-text {
+    font-size: 1.2em; /* Размер вводного текста */
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Стили для раздела тура в Гуанчжоу */
+.guangzhou-tour-title {
+    text-align: center; /* Центрирование заголовка */
+    margin: 20px 0 10px 0; /* Отступы: сверху - 20px, снизу - 10px */
+    font-size: 2.5em; /* Размер шрифта для заголовка */
+    color: #333; /* Цвет заголовка */
+}
+
+.guangzhou-intro-text {
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Занимает всю ширину экрана */
+    margin-bottom: 30px; /* Отступ снизу */
+    font-size: 1.2em; /* Размер шрифта для вводного текста */
+}
+
+.guangzhou-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* Белый полупрозрачный фон для текста */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px; /* Максимальная ширина оверлея */
+    margin: 0 auto 40px auto; /* Добавлен нижний отступ 40px */
+}
+
+.guangzhou-tour-day {
+    display: flex;
+    flex-direction: row; /* Горизонтальное выравнивание */
+    margin: 20px 0; /* Отступы между днями */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для блока дня */
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px; /* Отступы внутри блока */
+}
+
+.guangzhou-day-number {
+    flex: 0 0 100px; /* Фиксированная ширина для номера дня */
+    background-color: #4caf50; /* Цвет фона для выделения номера дня (зелёный для Гуанчжоу) */
+    padding: 10px; /* Отступ для номера дня */
+    text-align: center; /* Центрирование номера дня */
+    border-radius: 10px; /* Закругление углов номера дня */
+    margin-right: 20px; /* Отступ между номером дня и информацией */
+}
+
+.guangzhou-day-info {
+    flex-grow: 1; /* Позволяет тексту занимать оставшееся пространство */
+    padding: 10px; /* Внутренний отступ для текста */
+    text-align: center;
+}
+
+.guangzhou-day-image {
+    width: 500px; /* Изображение адаптируется под размер контейнера */
+    height: auto; /* Сохраняется пропорция изображения */
+    margin: 20px 0; /* Отступ сверху и снизу по 20px, слева и справа — 0 */
+    border-radius: 10px; /* Скругление углов (опционально) */
+}
+
+.guangzhou-day-content ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.guangzhou-day-content ul li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+
+/* Стили для раздела тура в Гуанчжоу */
+.guangzhou-tour-details {
+    position: relative; /* Относительное позиционирование для оверлея */
+}
+
+.guangzhou-background {
+    background: url('tours/tour_guangzhou/guangzhou-background.jpg') no-repeat center center; /* Путь к изображению фона для Гуанчжоу */
+    background-size: cover; /* Фон заполняет всю ширину экрана */
+    background-position: center; /* Центрируем изображение */
+    padding: 40px 0; /* Отступы для контейнера */
+    background-attachment: fixed; /* Фиксируем фон при скролле (опционально) */
+    background-color: #f5f5f5; /* Цвет фона на случай, если изображение не покрывает весь блок */
+}
+
+.guangzhou-tour-title {
+    font-size: 2.5em; /* Размер заголовка */
+    margin-bottom: 20px;
+}
+
+.guangzhou-intro-text {
+    font-size: 1.2em; /* Размер вводного текста */
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Стили для раздела тура в Чжанцзяцзе */
+.zhangjiajie-tour-title {
+    text-align: center; /* Центрирование заголовка */
+    margin: 20px 0 10px 0; /* Отступы: сверху - 20px, снизу - 10px */
+    font-size: 2.5em; /* Размер шрифта для заголовка */
+    color: #333; /* Цвет заголовка */
+}
+
+.zhangjiajie-intro-text {
+    text-align: center; /* Центрирование текста */
+    width: 100%; /* Занимает всю ширину экрана */
+    margin-bottom: 30px; /* Отступ снизу */
+    font-size: 1.2em; /* Размер шрифта для вводного текста */
+}
+
+.zhangjiajie-overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* Белый полупрозрачный фон для текста */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px; /* Максимальная ширина оверлея */
+    margin: 0 auto 40px auto; /* Добавлен нижний отступ 40px */
+}
+
+.zhangjiajie-tour-day {
+    display: flex;
+    flex-direction: row; /* Горизонтальное выравнивание */
+    margin: 20px 0; /* Отступы между днями */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для блока дня */
+    border-radius: 10px; /* Скругление углов */
+    padding: 20px; /* Отступы внутри блока */
+}
+
+.zhangjiajie-day-number {
+    flex: 0 0 100px; /* Фиксированная ширина для номера дня */
+    background-color: #4CAF50; /* Цвет фона для выделения номера дня (зелёный для Чжанцзяцзе) */
+    padding: 10px; /* Отступ для номера дня */
+    text-align: center; /* Центрирование номера дня */
+    border-radius: 10px; /* Закругление углов номера дня */
+    margin-right: 20px; /* Отступ между номером дня и информацией */
+}
+
+.zhangjiajie-day-info {
+    flex-grow: 1; /* Позволяет тексту занимать оставшееся пространство */
+    padding: 10px; /* Внутренний отступ для текста */
+    text-align: center;
+}
+
+.zhangjiajie-day-image {
+    width: 500px; /* Изображение адаптируется под размер контейнера */
+    height: auto; /* Сохраняется пропорция изображения */
+    margin: 20px 0; /* Отступ сверху и снизу по 20px, слева и справа — 0 */
+    border-radius: 10px; /* Скругление углов (опционально) */
+}
+
+.zhangjiajie-day-content ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+.zhangjiajie-day-content ul li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+
+/* Стили для общего раздела тура в Чжанцзяцзе */
+.zhangjiajie-tour-details {
+    position: relative; /* Относительное позиционирование для оверлея */
+}
+
+.zhangjiajie-background {
+    background: url('tours/tour_zhangjiajie/zhangjiajie-background.jpg') no-repeat center center; /* Путь к изображению фона для Чжанцзяцзе */
+    background-size: cover; /* Фон заполняет всю ширину экрана */
+    background-position: center; /* Центрируем изображение */
+    padding: 40px 0; /* Отступы для контейнера */
+    background-attachment: fixed; /* Фиксируем фон при скролле (опционально) */
+    background-color: #f5f5f5; /* Цвет фона на случай, если изображение не покрывает весь блок */
+}
+
+.zhangjiajie-tour-title {
+    font-size: 2.5em; /* Размер заголовка */
+    margin-bottom: 20px;
+}
+
+.zhangjiajie-intro-text {
+    font-size: 1.2em; /* Размер вводного текста */
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+/* Контейнер для секции контактов */
+.contacts {
+    background: url('photo/contact-background/contact-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 80px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 81.5vh;
+    position: relative;
+}
+
+/* Полупрозрачная подложка для текста */
+.contacts .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    padding: 40px;
+    border-radius: 10px;
+    width: 60%; /* Широкий, но не на весь экран */
+    max-width: 700px;
+    text-align: center; /* Выравнивание текста по левому краю */
+}
+
+/* Заголовок */
+.contacts h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Текст под заголовком */
+.contacts p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Ссылки на социальные сети */
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+    line-height: 1.8; /* Расстояние между строками */
+}
+
+.social-links li {
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* Отзывы */
+.reviews {
+    padding: 50px 0;
+    background: url('images/reviews-background.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.reviews::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон поверх изображения */
+    z-index: 1;
+}
+
+.reviews .container {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    z-index: 2; /* Поверх затемненного фона */
+}
+
+.review-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Белый с легкой прозрачностью для выделения отзывов */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-photo {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.review-text {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.review-video {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.reviews h2 {
+    margin-top: 5px; /* Отступ от header */
+    margin-bottom: 50px; /* Отступ от первого блока с отзывами */
+    font-size: 2.5em; /* Размер шрифта для заголовка */
+    color: #fff; /* Цвет текста */
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+/* О НАС */
+.about-section {
+    background: url('images/background_about.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 20px;
+}
+
+.about-section .container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.about-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Промежуток между контейнерами */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для контейнеров */
+}
+
+.about-section h2 {
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.about-section p, .about-section ul li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-section ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.about-section a {
+    color: #2a7ae2;
+    text-decoration: none;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+}
+
